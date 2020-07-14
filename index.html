@@ -102,10 +102,8 @@
             event.preventDefault();
             greeting = $('input').val();
             console.log(greeting)
-            web3.eth.getAccounts().then(function (accounts) {
-                contract.methods.setGreeting(greeting).send({
-                    from: accounts[0]
-                });
+            web3.eth.getAccounts().then(function(accounts) {
+          contract.methods.setGreeting(greeting).send({ from: accounts[0] });
             });
         });
     </script>
